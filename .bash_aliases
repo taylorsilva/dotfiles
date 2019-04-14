@@ -1,0 +1,7 @@
+alias vim="nvim"
+alias v="nvim"
+alias g="git"
+alias gst="git status"
+alias gap="git add -p"
+alias d="docker"
+alias dm="docker-machine"

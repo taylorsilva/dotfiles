@@ -1,0 +1,8 @@
+[user]
+	email = taylorsilva@outlook.com
+	name = taylor
+[push]
+	default = simple
+[core]
+	excludesfile = /Users/taylor/.gitignore
+	editor = nvim
