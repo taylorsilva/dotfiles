@@ -1,8 +1,13 @@
 [user]
 	email = taylorsilva@outlook.com
-	name = taylor
+	name = Taylor Silva
 [push]
 	default = simple
 [core]
 	excludesfile = /Users/taylor/.gitignore
 	editor = nvim
+[alias]
+	co = checkout
+	ci = commit
+	st = status
+	br = branch
