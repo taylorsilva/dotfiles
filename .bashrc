@@ -28,7 +28,7 @@ fi
 ############################## Export env's ################################
 #############################################################################
 
-
+export VISUAL=vim
 export GRADLE_HOME="/Applications/gradle"
 export PATH="$GRADLE_HOME/bin:/usr/local/sbin:$PATH"
 
