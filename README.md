@@ -6,7 +6,7 @@ These are my dotfiles. To use them do the following:
 
 ```
 cd ~
-git clone git@github.com:taylorsilva/dotfiles.git
+git clone git@github.com:taylorsilva/dotfiles.git ~/.dotfiles
 ```
 
 2. Make sure `GNU stow` is installed:
@@ -19,4 +19,9 @@ brew install stow
 sudo apt install stow
 ```
 
-3. Use `stow <dir>` to symlink the contents of each folder to your home directory
+3. Use `stow` to create symlinks in your home directory
+
+```
+cd ~/.dotfiles
+stow bash vim # any other folders, separated by spaces
+```
