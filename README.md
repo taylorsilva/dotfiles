@@ -5,7 +5,6 @@ These are my dotfiles. To use them do the following:
 1. Clone this repo into your home directory:
 
 ```
-cd ~
 git clone git@github.com:taylorsilva/dotfiles.git ~/.dotfiles
 ```
 
@@ -23,5 +22,5 @@ sudo apt install stow
 
 ```
 cd ~/.dotfiles
-stow bash vim # any other folders, separated by spaces
+stow bash vim #any other folders, separated by spaces
 ```
