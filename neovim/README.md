@@ -8,3 +8,9 @@ curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs \
 
 nvim +PlugInstall +qa
 ```
+
+### vim-plug cheat sheet
+
+All changes should be made in the `init.vim` file.
+
+To install new plugins after you add them to `init.vim` run `nvim +PlugInstall +qa`

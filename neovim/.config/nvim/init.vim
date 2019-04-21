@@ -24,5 +24,11 @@ set number
 call plug#begin('~/.local/share/nvim/plugged')
 
 Plug 'https://github.com/scrooloose/nerdtree'
+Plug 'https://github.com/ayu-theme/ayu-vim'
 
 call plug#end()
+
+" Set the theme
+set termguicolors " enable true colors support
+let ayucolor="mirage" " optiosn include light, dark, mirage
+colorscheme ayu
