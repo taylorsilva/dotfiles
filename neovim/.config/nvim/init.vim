@@ -25,7 +25,7 @@ call plug#begin('~/.local/share/nvim/plugged')
 
 Plug 'https://github.com/scrooloose/nerdtree'
 Plug 'https://github.com/ayu-theme/ayu-vim'
-
+Plug 'https://github.com/fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 call plug#end()
 
 " Set the theme

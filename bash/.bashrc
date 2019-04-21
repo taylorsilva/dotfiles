@@ -28,16 +28,16 @@ fi
 ############################## Export env's ################################
 #############################################################################
 
-export VISUAL=vim
+export VISUAL=nvim
 export GRADLE_HOME="/Applications/gradle"
 export PATH="$GRADLE_HOME/bin:/usr/local/sbin:$PATH"
 
 if [ -e ~/.bash_it ]; then
   # Path to the bash it configuration
-  export BASH_IT="/Users/taylor/.bash_it"
+  export BASH_IT="${HOME}/.bash_it"
   # Lock and Load a custom theme file
   # location /.bash_it/themes/
-  export BASH_IT_THEME='modern'
+  export BASH_IT_THEME="${HOME}/.dotfiles/bashit.theme.bash"
   # Set this to false to turn off version control status checking within the prompt for all themes
   export SCM_CHECK=true
   # Load Bash It
