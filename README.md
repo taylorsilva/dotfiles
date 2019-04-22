@@ -22,5 +22,5 @@ sudo apt install stow
 
 ```
 cd ~/.dotfiles
-stow bash vim #any other folders, separated by spaces
+stow bash neovim git #any other folders, separated by spaces
 ```
