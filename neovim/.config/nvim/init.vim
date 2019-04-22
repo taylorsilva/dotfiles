@@ -1,21 +1,31 @@
+""""""""""""""""""""""""""""""""""""""""
+" Set default behaviour of neovim
+""""""""""""""""""""""""""""""""""""""""
 " Change how tabs look
 set tabstop=2
 set softtabstop=0 noexpandtab
 set shiftwidth=2
-
-" clear search highlighting with <space>,
-map <Space> :noh<cr>
-" open nerdtree with the \ key, above enter
-map <Bslash> :NERDTreeToggle<CR>
-" open FZF with ,f
-map ,f :FZF<CR>
+" Enable persistent undo
+set undofile
+" always show line numbers
+set number
 
 " Open nerdtree if no files were specified
 autocmd StdinReadPre * let s:std_in=1
 autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
 
-" always show line numbers
-set number
+
+""""""""""""""""""""""""""""""""""""""""
+" Key Mappings
+""""""""""""""""""""""""""""""""""""""""
+" clear search highlighting with <space>,
+map <Space> :noh<CR>
+" open nerdtree with the \ key, above enter
+map <Bslash> :NERDTreeToggle<CR>
+" open FZF with ,f
+map ,f :FZF<CR>
+
+
 
 """"""""""""""""""""""""""""""""""""""""
 " Plugins
