@@ -1,5 +1,5 @@
-# Modified version of the original modern theme from bash-it
-# Removes the battery charge thing and adds the time
+# Modified version of the original modern theme in bash-it
+# Removes the battery charge and adds the current time
 
 SCM_THEME_PROMPT_PREFIX=""
 SCM_THEME_PROMPT_SUFFIX=""
@@ -38,16 +38,20 @@ modern_scm_prompt() {
 	fi
 }
 
+modern_current_time_prompt() {
+	echo "[$(date '+%l:%M%p')]"
+}
+
 prompt() {
 	if [ $? -ne 0 ]
 	then
 		# Yes, the indenting on these is weird, but it has to be like
 		# this otherwise it won't display properly.
 
-    PS1="${TITLEBAR}${bold_red}┌─${reset_color}$(modern_scm_prompt)[$(date '+%l:%M%p')][${cyan}\W${normal}]$(is_vim_shell)
+		PS1="${TITLEBAR}${bold_red}┌─${reset_color}$(modern_scm_prompt)$(modern_current_time_prompt)[${cyan}\W${normal}]$(is_vim_shell)
 ${bold_red}└─▪${normal} "
 	else
-		PS1="${TITLEBAR}┌─$(modern_scm_prompt)[$(date '+%l:%M%p')][${cyan}\W${normal}]$(is_vim_shell)
+		PS1="${TITLEBAR}┌─$(modern_scm_prompt)$(modern_current_time_prompt)[${cyan}\W${normal}]$(is_vim_shell)
 └─▪ "
 	fi
 }
