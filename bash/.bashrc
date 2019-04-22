@@ -13,16 +13,17 @@ esac
 
 # You may want to put all your additions into a separate file like
 # ~/.bash_aliases, instead of adding them here directly.
-if [ -e ~/.bash_aliases ]; then
-    source ~/.bash_aliases
-fi
+[ -e ~/.bash_aliases ] && source ~/.bash_aliases
 
 # functions definitions.
 # You may want to put all your additions into a separate file like
 # ~/.bash_functions, instead of adding them here directly.
-if [ -e ~/.bash_functions ]; then
-    source ~/.bash_functions
-fi
+[ -e ~/.bash_functions ] && source ~/.bash_functions
+
+[ -e ~/.fzf.bash ] && source ~/.fzf.bash
+
+# git autocomplete
+[ -e /usr/local/etc/bash_completion ] && . /usr/local/etc/bash_completion
 
 #############################################################################
 ############################## Export env's ################################
@@ -44,9 +45,8 @@ if [ -e ~/.bash_it ]; then
   source "$BASH_IT"/bash_it.sh
 fi
 
-# git autocomplete
-[ -e /usr/local/etc/bash_completion ] && . /usr/local/etc/bash_completion
 
+# the final mess I need to figure out...
 if [ -e ~/go ]; then
   export GOPATH=$HOME/go
   export PATH="$HOME/go/bin:$PATH"
