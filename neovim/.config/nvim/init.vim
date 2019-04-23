@@ -12,6 +12,8 @@ set number
 " Smart case searching
 set ignorecase
 set smartcase
+" when doing :vs splrit right
+set splitright
 
 " Open nerdtree if no files were specified
 autocmd StdinReadPre * let s:std_in=1
@@ -54,7 +56,9 @@ map ,h :call FuzzyFind(1)<CR>
 map <leader>w :w<CR>
 map <leader>x :x<CR>
 map <leader>q :q<CR>
-
+" Maintain visual selection after indenting
+vnoremap < <gv
+vnoremap > >gv
 
 """"""""""""""""""""""""""""""""""""""""
 " Plugins
@@ -65,9 +69,18 @@ call plug#begin('~/.local/share/nvim/plugged')
 
 Plug 'https://github.com/scrooloose/nerdtree'
 Plug 'https://github.com/ayu-theme/ayu-vim'
-Plug 'https://github.com/fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 Plug 'https://github.com/junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }  " installs the vim plugin and becomes available on the command line with ctrl+r
 Plug 'https://github.com/junegunn/fzf.vim'  " actually required for vim to use fzf
+Plug 'https://github.com/ntpeters/vim-better-whitespace'
+Plug 'https://github.com/jszakmeister/vim-togglecursor'
+" Sublime style selection. Highlight and then <C-n> for next, <C-x> to skip,
+" <C-p> to go back. <A-n> to select all matches
+Plug 'https://github.com/terryma/vim-multiple-cursors'
+Plug 'https://github.com/zhimsel/vim-stay'
+
+" Language Specific Plugins
+
+Plug 'https://github.com/fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 
 call plug#end()
 
