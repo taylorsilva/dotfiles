@@ -14,6 +14,8 @@ set ignorecase
 set smartcase
 " when doing :vs splrit right
 set splitright
+" Enable the mouse in the terminal
+set mouse=a
 
 " Open nerdtree if no files were specified
 autocmd StdinReadPre * let s:std_in=1
