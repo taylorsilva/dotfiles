@@ -1,6 +1,6 @@
 # Dotfiles
 
-These are my dotfiles. To use them do the following:
+To use them do the following:
 
 1. Clone this repo into your home directory:
 
