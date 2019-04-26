@@ -38,7 +38,7 @@ if [ -e ~/.bash_it ]; then
   export BASH_IT="${HOME}/.bash_it"
   # Lock and Load a custom theme file
   # location /.bash_it/themes/
-  export BASH_IT_THEME="${HOME}/.dotfiles/bashit.theme.bash"
+  export BASH_IT_THEME="modern-time"
   # Set this to false to turn off version control status checking within the prompt for all themes
   export SCM_CHECK=true
   # Load Bash It
