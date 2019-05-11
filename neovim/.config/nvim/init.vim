@@ -1,6 +1,7 @@
 """"""""""""""""""""""""""""""""""""""""
 " Set default behaviour of neovim
 """"""""""""""""""""""""""""""""""""""""
+syntax on
 " Change how tabs look
 set tabstop=2
 set softtabstop=0 noexpandtab
@@ -28,10 +29,6 @@ endif
 " always assume bash when executing stuff
 set shell=/bin/bash
 
-" Open nerdtree if no files were specified
-autocmd StdinReadPre * let s:std_in=1
-autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
-
 " Use rg to perform the search, so that .gitignore files and the like are
 " respected
 let g:fzf_default_command = 'ag --ignore .git -l -g ""'
@@ -49,16 +46,6 @@ function FuzzyFind(show_hidden)
 			silent execute ':FZF -m .'
 		endif
 endfunction
-
-" Recommended settings for syntastic
-set statusline+=%#warningmsg#
-set statusline+=%{SyntasticStatuslineFlag()}
-set statusline+=%*
-
-let g:syntastic_always_populate_loc_list = 1
-let g:syntastic_auto_loc_list = 1
-let g:syntastic_check_on_open = 1
-let g:syntastic_check_on_wq = 0
 
 
 """"""""""""""""""""""""""""""""""""""""
@@ -107,8 +94,8 @@ Plug 'https://github.com/terryma/vim-multiple-cursors'
 Plug 'https://github.com/zhimsel/vim-stay'
 
 " Language Specific Plugins
+Plug 'https://github.com/sheerun/vim-polyglot'
 Plug 'https://github.com/fatih/vim-go', { 'do': ':GoUpdateBinaries' }
-Plug 'https://github.com/vim-syntastic/syntastic'
 
 call plug#end()
 
