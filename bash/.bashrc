@@ -1,4 +1,4 @@
-# Bashrc
+# Bashrc - This file contains bash specific configuration (functions, aliases, bash-it stuff, etc.)
 
 # If not running interactively, don't do anything
 case $- in
@@ -46,7 +46,7 @@ if [ -e ~/.bash_it ]; then
 fi
 
 
-# the final mess I need to figure out...
+# TODO: the final mess I need to figure out...
 if [ -e ~/go ]; then
   export GOPATH=$HOME/go
   export PATH="$HOME/go/bin:$PATH"
