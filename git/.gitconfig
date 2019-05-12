@@ -8,6 +8,6 @@
 	editor = nvim
 [alias]
 	co = checkout
-	ci = commit --signoff
+	ci = commit --signoff -v
 	st = status
 	br = branch
