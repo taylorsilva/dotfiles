@@ -32,19 +32,20 @@ set shell=/bin/bash
 " Use rg to perform the search, so that .gitignore files and the like are
 " respected
 let g:fzf_default_command = 'ag --ignore .git -l -g ""'
-" Search from the git repo root, if we're in a repo, else the cwd
+
 function FuzzyFind(show_hidden)
+	if a:show_hidden
+		let $FZF_DEFAULT_COMMAND = g:fzf_default_command . ' --hidden'
+	else
+		let $FZF_DEFAULT_COMMAND = g:fzf_default_command
+	endif
+	" Search from the git repo root, if we're in a repo, else the cwd
 	let gitparent=system('git rev-parse --show-toplevel')[:-2]
-	  if a:show_hidden
-			let $FZF_DEFAULT_COMMAND = g:fzf_default_command . ' --hidden'
-		else
-			let $FZF_DEFAULT_COMMAND = g:fzf_default_command
-		endif
-		if empty(matchstr(gitparent, '^fatal:.*'))
-			silent execute ':FZF -m ' . gitparent
-		else
-			silent execute ':FZF -m .'
-		endif
+	if empty(matchstr(gitparent, '^fatal:.*'))
+		silent execute ':FZF -m ' . gitparent
+	else
+		silent execute ':FZF -m .'
+	endif
 endfunction
 
 
