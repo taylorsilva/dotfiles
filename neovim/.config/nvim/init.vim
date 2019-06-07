@@ -58,11 +58,11 @@ let mapleader=","
 " clear search highlighting with <space>,
 map <leader>n :noh<CR>
 
-" open nerdtree with the \ key, above enter
+" open nerdtree with the \ key
 map <Bslash> :NERDTreeToggle<CR>
 
 " open FZF with ,f and includes hidden files in your search
-map ,f :call FuzzyFind(1)<CR>
+map <leader>f :call FuzzyFind(1)<CR>
 
 " Quickly save, quit, or save-and-quit
 map <leader>w :w<CR>
@@ -76,6 +76,8 @@ vnoremap > >gv
 " tab for cycling through options
 inoremap <expr> <TAB> pumvisible() ? "\<C-n>" : "\<TAB>"
 
+inoremap jk <Esc>
+inoremap kj <Esc>
 """"""""""""""""""""""""""""""""""""""""
 " Plugins
 """"""""""""""""""""""""""""""""""""""""
