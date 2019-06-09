@@ -26,12 +26,3 @@ sudo apt install stow
 cd ~/.dotfiles
 stow bash neovim git #any other folders, separated by spaces
 ```
-
----
-
-I like to use [bash-it](https://github.com/Bash-it/bash-it#installation). When installing, make sure to use the `--no-modify-config` flag. The bash dotfiles already have bash-it configuration in them.
-
-```bash
-git clone --depth=1 https://github.com/Bash-it/bash-it.git ~/.bash_it
-~/.bash_it/install.sh --no-modify-config
-```
