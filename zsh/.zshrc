@@ -18,3 +18,4 @@ source $ZSH/oh-my-zsh.sh
 
 # User configuration
 export EDITOR='nvim'
+export VISUAL='nvim'
