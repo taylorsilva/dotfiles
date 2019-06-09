@@ -6,6 +6,8 @@ To use them do the following:
 
 ```bash
 git clone git@github.com:taylorsilva/dotfiles.git ~/.dotfiles
+cd ~/.dotfiles
+git submodule update --init
 ```
 
 2. Make sure `GNU stow` is installed:
