@@ -91,6 +91,7 @@ Plug 'https://github.com/junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --al
 Plug 'https://github.com/junegunn/fzf.vim'  " actually required for vim to use fzf
 Plug 'https://github.com/ntpeters/vim-better-whitespace'
 Plug 'https://github.com/jszakmeister/vim-togglecursor'
+Plug 'Valloric/YouCompleteMe'
 " Sublime style selection. Highlight and then <C-n> for next, <C-x> to skip,
 " <C-p> to go back. <A-n> to select all matches
 Plug 'https://github.com/terryma/vim-multiple-cursors'
