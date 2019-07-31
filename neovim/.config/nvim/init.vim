@@ -10,6 +10,10 @@ set shiftwidth=2
 " always show line numbers
 set number
 
+" highlight current line and column
+set cursorline
+set cursorcolumn
+
 " Smart case searching
 set ignorecase
 set smartcase
