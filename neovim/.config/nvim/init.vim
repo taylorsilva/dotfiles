@@ -30,6 +30,12 @@ if has('persistent_undo')
   set undodir=~/.nvim/.undo
 endif
 
+" soft wrap
+set textwidth=0
+set wrapmargin=0
+set wrap
+set linebreak
+
 " always assume bash when executing stuff
 set shell=/bin/bash
 
