@@ -3,8 +3,8 @@
 """"""""""""""""""""""""""""""""""""""""
 syntax on
 " Change how tabs look
+set expandtab
 set tabstop=2
-set softtabstop=0 noexpandtab
 set shiftwidth=2
 
 " always show line numbers
@@ -79,10 +79,6 @@ map <leader>w :w<CR>
 map <leader>x :x<CR>
 map <leader>q :q<CR>
 
-" Maintain visual selection after indenting
-vnoremap < <gv
-vnoremap > >gv
-
 " tab for cycling through options
 inoremap <expr> <TAB> pumvisible() ? "\<C-n>" : "\<TAB>"
 
@@ -112,6 +108,7 @@ Plug 'https://github.com/zhimsel/vim-stay'
 " Language Specific Plugins
 Plug 'https://github.com/sheerun/vim-polyglot'
 Plug 'https://github.com/fatih/vim-go', { 'do': ':GoUpdateBinaries' }
+	let g:go_fmt_command = "goimports"
 
 call plug#end()
 
