@@ -46,11 +46,7 @@ if [ -e ~/.bash_it ]; then
 fi
 
 
-# TODO: the final mess I need to figure out...
-if [ -e ~/go ]; then
-  export GOPATH=$HOME/go
-  export PATH="$HOME/go/bin:$PATH"
+# Add things to PATH
+if [ -d "$GOPATH/bin" ]; then
+  export PATH=$PATH:$GOPATH/bin
 fi
-export PATH="/usr/local/opt/sqlite/bin:$PATH"
-# use go 1.11
-export PATH="/usr/local/opt/go@1.11/bin:$PATH"

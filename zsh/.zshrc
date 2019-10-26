@@ -19,3 +19,9 @@ source $ZSH/oh-my-zsh.sh
 # User configuration
 export EDITOR='nvim'
 export VISUAL='nvim'
+export GOPATH=$HOME/go
+
+# Add things to PATH
+if [ -d "$GOPATH/bin" ]; then
+  export PATH=$PATH:$GOPATH/bin
+fi
