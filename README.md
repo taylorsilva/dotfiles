@@ -10,7 +10,7 @@ cd ~/.dotfiles
 git submodule update --init
 ```
 
-2. Make sure `GNU stow` is installed:
+1. Make sure `GNU stow` is installed:
 
 ```bash
 # Mac
@@ -20,7 +20,10 @@ brew install stow
 sudo apt install stow
 ```
 
-3. Use `stow` to create symlinks in your home directory
+1. Depending on which directories you plan to use there may be other
+setup instructions to follow. Check the `README.md` inside each folder.
+
+1. Use `stow` to create symlinks in your home directory
 
 ```bash
 cd ~/.dotfiles
