@@ -32,6 +32,7 @@ esac
 export VISUAL=nvim
 export GRADLE_HOME="/Applications/gradle"
 export PATH="$GRADLE_HOME/bin:/usr/local/sbin:$PATH"
+export GOPATH=$HOME/go
 
 if [ -e ~/.bash_it ]; then
   # Path to the bash it configuration
