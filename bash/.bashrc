@@ -18,7 +18,7 @@ esac
 # functions definitions.
 # You may want to put all your additions into a separate file like
 # ~/.bash_functions, instead of adding them here directly.
-[ -e ~/.bash_functions ] && source ~/.bash_functions
+[ -e ~/.bash_functions.sh ] && source ~/.bash_functions.sh
 
 [ -e ~/.fzf.bash ] && source ~/.fzf.bash
 
