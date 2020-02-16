@@ -6,6 +6,7 @@ alias gap="git add -p"
 alias gup="git pull -r"
 alias d="docker"
 alias dm="docker-machine"
+alias k="kubectl"
 alias ll="ls -lahF"
 # mac specific alias. run this if networking things like vpn stop working
 alias restartwifi='sudo networksetup -setv4off Wi-Fi;sudo  networksetup -setdhcp Wi-Fi'
