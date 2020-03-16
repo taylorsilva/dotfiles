@@ -20,6 +20,7 @@ source $ZSH/oh-my-zsh.sh
 export EDITOR='nvim'
 export VISUAL='nvim'
 export GOPATH=$HOME/go
+export GIT_DUET_ROTATE_AUTHOR=1
 
 # Add things to PATH
 if [ -d "$GOPATH/bin" ]; then
