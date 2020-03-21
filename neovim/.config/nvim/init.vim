@@ -98,7 +98,7 @@ Plug 'https://github.com/junegunn/fzf.vim'  " actually required for vim to use f
 Plug 'https://github.com/ntpeters/vim-better-whitespace'
 Plug 'https://github.com/jszakmeister/vim-togglecursor'
 Plug 'Valloric/YouCompleteMe'
-	let g:ycm_server_python_interpreter = '/usr/bin/python'
+	let g:ycm_server_python_interpreter = '/usr/local/bin/python3'
 
 " Sublime style selection. Highlight and then <C-n> for next, <C-x> to skip,
 " <C-p> to go back. <A-n> to select all matches

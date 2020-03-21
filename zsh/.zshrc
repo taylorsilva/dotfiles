@@ -26,3 +26,6 @@ export GIT_DUET_ROTATE_AUTHOR=1
 if [ -d "$GOPATH/bin" ]; then
   export PATH=$PATH:$GOPATH/bin
 fi
+if [ -d "$HOME/.cargo/bin" ]; then
+  export PATH="$HOME/.cargo/bin:$PATH"
+fi
