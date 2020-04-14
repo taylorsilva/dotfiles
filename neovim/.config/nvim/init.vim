@@ -38,6 +38,7 @@ set linebreak
 
 " always assume bash when executing stuff
 set shell=/bin/bash
+let $SHELL="/bin/bash"
 
 " Use rg to perform the search, so that .gitignore files and the like are
 " respected
@@ -68,9 +69,6 @@ let mapleader=","
 " clear search highlighting with <space>,
 map <leader>n :noh<CR>
 
-" open nerdtree with the \ key
-map <Bslash> :NERDTreeToggle<CR>
-
 " open FZF with ,f and includes hidden files in your search
 map <leader>f :call FuzzyFind(1)<CR>
 
@@ -84,6 +82,9 @@ inoremap <expr> <TAB> pumvisible() ? "\<C-n>" : "\<TAB>"
 
 inoremap jk <Esc>
 inoremap kj <Esc>
+
+" open up edit, the defaul file explorer
+map - :edit .<CR>
 """"""""""""""""""""""""""""""""""""""""
 " Plugins
 """"""""""""""""""""""""""""""""""""""""
@@ -91,7 +92,6 @@ inoremap kj <Esc>
 " Plugin configuration
 call plug#begin('~/.local/share/nvim/plugged')
 
-Plug 'https://github.com/scrooloose/nerdtree'
 Plug 'https://github.com/ayu-theme/ayu-vim'
 Plug 'https://github.com/junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }  " installs the vim plugin and becomes available on the command line with ctrl+r
 Plug 'https://github.com/junegunn/fzf.vim'  " actually required for vim to use fzf
@@ -117,5 +117,5 @@ call plug#end()
 
 " Set the theme
 set termguicolors " enable true colors support
-let ayucolor="mirage" " optiosn include light, dark, mirage
+let ayucolor="dark" " optiosn include light, dark, mirage
 colorscheme ayu
