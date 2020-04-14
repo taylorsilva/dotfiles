@@ -84,7 +84,7 @@ inoremap jk <Esc>
 inoremap kj <Esc>
 
 " open up edit, the defaul file explorer
-map - :edit .<CR>
+map - :edit %:h<CR>
 """"""""""""""""""""""""""""""""""""""""
 " Plugins
 """"""""""""""""""""""""""""""""""""""""
