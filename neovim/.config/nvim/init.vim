@@ -4,8 +4,8 @@
 syntax on
 " Change how tabs look
 set expandtab
-set tabstop=2
-set shiftwidth=2
+set tabstop=4
+set shiftwidth=4
 
 " always show line numbers
 set number
@@ -18,8 +18,10 @@ set cursorcolumn
 set ignorecase
 set smartcase
 
-" when doing :vs splrit right
+" when doing :vs split right
 set splitright
+" when doing :sp split below
+set splitbelow
 
 " Enable the mouse in all modes
 set mouse=a
@@ -83,8 +85,8 @@ inoremap <expr> <TAB> pumvisible() ? "\<C-n>" : "\<TAB>"
 inoremap jk <Esc>
 inoremap kj <Esc>
 
-" open up edit, the defaul file explorer
-map - :edit %:h<CR>
+" open up netrw
+map - :Explore<CR>
 """"""""""""""""""""""""""""""""""""""""
 " Plugins
 """"""""""""""""""""""""""""""""""""""""
@@ -92,16 +94,16 @@ map - :edit %:h<CR>
 " Plugin configuration
 call plug#begin('~/.local/share/nvim/plugged')
 
-Plug 'https://github.com/ayu-theme/ayu-vim'
+Plug 'https://github.com/sainnhe/sonokai'
 Plug 'https://github.com/junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }  " installs the vim plugin and becomes available on the command line with ctrl+r
 Plug 'https://github.com/junegunn/fzf.vim'  " actually required for vim to use fzf
 Plug 'https://github.com/ntpeters/vim-better-whitespace'
 Plug 'https://github.com/jszakmeister/vim-togglecursor'
 Plug 'Valloric/YouCompleteMe'
-	let g:ycm_server_python_interpreter = '/usr/local/bin/python3'
-  let g:ycm_complete_in_comments = 1
-  let g:ycm_complete_in_strings = 1
-  let g:ycm_collect_identifiers_from_tags_files = 1
+    let g:ycm_server_python_interpreter = '/usr/local/bin/python3'
+    let g:ycm_complete_in_comments = 1
+    let g:ycm_complete_in_strings = 1
+    let g:ycm_collect_identifiers_from_tags_files = 1
 
 " Sublime style selection. Highlight and then <C-n> for next, <C-x> to skip,
 " <C-p> to go back. <A-n> to select all matches
@@ -117,5 +119,4 @@ call plug#end()
 
 " Set the theme
 set termguicolors " enable true colors support
-let ayucolor="dark" " optiosn include light, dark, mirage
-colorscheme ayu
+colorscheme sonokai
