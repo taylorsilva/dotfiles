@@ -87,6 +87,8 @@ inoremap kj <Esc>
 
 " open up netrw
 map - :Explore<CR>
+" hide the netrw banner
+let g:netrw_banner = 0
 """"""""""""""""""""""""""""""""""""""""
 " Plugins
 """"""""""""""""""""""""""""""""""""""""
