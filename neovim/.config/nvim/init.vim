@@ -116,6 +116,7 @@ Plug 'https://github.com/zhimsel/vim-stay'
 Plug 'https://github.com/sheerun/vim-polyglot'
 Plug 'https://github.com/fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 	let g:go_fmt_command = "goimports"
+    let go_echo_go_info = 0 " disable annoying popup when using auto-complete
 
 call plug#end()
 
