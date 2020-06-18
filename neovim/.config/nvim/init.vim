@@ -69,7 +69,7 @@ endfunction
 let mapleader=","
 
 " clear search highlighting with <space>,
-map <leader>n :noh<CR>
+map <space> :noh<CR>
 
 " open FZF with ,f and includes hidden files in your search
 map <leader>f :call FuzzyFind(1)<CR>
@@ -78,6 +78,10 @@ map <leader>f :call FuzzyFind(1)<CR>
 map <leader>w :w<CR>
 map <leader>x :x<CR>
 map <leader>q :q<CR>
+
+"navigate tabs
+map <leader>n :tabn<CR>
+map <leader>p :tabp<CR>
 
 " tab for cycling through options
 inoremap <expr> <TAB> pumvisible() ? "\<C-n>" : "\<TAB>"
