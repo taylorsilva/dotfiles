@@ -76,6 +76,7 @@ map <leader>f :call FuzzyFind(1)<CR>
 
 " Quickly save, quit, or save-and-quit
 map <leader>w :w<CR>
+map <CR> :w<CR>
 map <leader>x :x<CR>
 map <leader>q :q<CR>
 

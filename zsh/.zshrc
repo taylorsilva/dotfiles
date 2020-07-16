@@ -31,3 +31,5 @@ if [ -d "$HOME/.cargo/bin" ]; then
 fi
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+source <(fly completion --shell zsh)
