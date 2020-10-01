@@ -99,6 +99,10 @@ nmap k gk
 map - :Explore<CR>
 " hide the netrw banner
 let g:netrw_banner = 0
+
+" don't auto-fold
+set foldlevelstart=99
+
 """"""""""""""""""""""""""""""""""""""""
 " Plugins
 """"""""""""""""""""""""""""""""""""""""
