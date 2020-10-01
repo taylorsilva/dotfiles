@@ -87,8 +87,13 @@ map <leader>p :tabp<CR>
 " tab for cycling through options
 inoremap <expr> <TAB> pumvisible() ? "\<C-n>" : "\<TAB>"
 
+" escape by mashing j and k
 inoremap jk <Esc>
 inoremap kj <Esc>
+
+" sensible long line navigation
+nmap j gj
+nmap k gk
 
 " open up netrw
 map - :Explore<CR>
@@ -101,7 +106,8 @@ let g:netrw_banner = 0
 " Plugin configuration
 call plug#begin('~/.local/share/nvim/plugged')
 
-Plug 'https://github.com/sainnhe/sonokai'
+" Plug 'https://github.com/sainnhe/sonokai' "Colourful theme
+Plug 'https://github.com/arcticicestudio/nord-vim' "Nord dark theme
 Plug 'https://github.com/junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }  " installs the vim plugin and becomes available on the command line with ctrl+r
 Plug 'https://github.com/junegunn/fzf.vim'  " actually required for vim to use fzf
 Plug 'https://github.com/ntpeters/vim-better-whitespace'
@@ -127,4 +133,4 @@ call plug#end()
 
 " Set the theme
 set termguicolors " enable true colors support
-colorscheme sonokai
+colorscheme nord
