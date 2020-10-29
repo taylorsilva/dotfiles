@@ -117,7 +117,7 @@ Plug 'https://github.com/junegunn/fzf.vim'  " actually required for vim to use f
 Plug 'https://github.com/ntpeters/vim-better-whitespace'
 Plug 'https://github.com/jszakmeister/vim-togglecursor'
 Plug 'Valloric/YouCompleteMe'
-    let g:ycm_server_python_interpreter = '/usr/local/bin/python3'
+    let g:ycm_server_python_interpreter = '/usr/bin/python3'
     let g:ycm_complete_in_comments = 1
     let g:ycm_complete_in_strings = 1
     let g:ycm_collect_identifiers_from_tags_files = 1
