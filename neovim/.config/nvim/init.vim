@@ -108,6 +108,7 @@ set foldlevelstart=99
 """"""""""""""""""""""""""""""""""""""""
 
 " Plugin configuration
+" run :PlugInstall to install new plugins
 call plug#begin('~/.local/share/nvim/plugged')
 
 " Plug 'https://github.com/sainnhe/sonokai' "Colourful theme
@@ -115,6 +116,7 @@ Plug 'https://github.com/arcticicestudio/nord-vim' "Nord dark theme
 Plug 'https://github.com/junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }  " installs the vim plugin and becomes available on the command line with ctrl+r
 Plug 'https://github.com/junegunn/fzf.vim'  " actually required for vim to use fzf
 Plug 'https://github.com/ntpeters/vim-better-whitespace'
+Plug 'https://github.com/tpope/vim-commentary'
 Plug 'https://github.com/jszakmeister/vim-togglecursor'
 Plug 'Valloric/YouCompleteMe'
     let g:ycm_server_python_interpreter = '/usr/bin/python3'
