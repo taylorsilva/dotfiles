@@ -90,6 +90,7 @@ inoremap <expr> <TAB> pumvisible() ? "\<C-n>" : "\<TAB>"
 " escape by mashing j and k
 inoremap jk <Esc>
 inoremap kj <Esc>
+inoremap jj <Esc>
 
 " sensible long line navigation
 nmap j gj
