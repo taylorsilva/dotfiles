@@ -14,3 +14,7 @@ nvim +PlugInstall +qa
 All changes should be made in the `init.vim` file.
 
 To install new plugins after you add them to `init.vim` run `nvim +PlugInstall +qa`
+
+### Other Troubleshooting
+
+Run the `:checkhealth` command.

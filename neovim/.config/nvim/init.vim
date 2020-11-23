@@ -109,20 +109,16 @@ set foldlevelstart=99
 
 " Plugin configuration
 " run :PlugInstall to install new plugins
-call plug#begin('~/.local/share/nvim/plugged')
+call plug#begin('~/.local/share/nvim/plugged') "where plugins are installed
 
-" Plug 'https://github.com/sainnhe/sonokai' "Colourful theme
 Plug 'https://github.com/arcticicestudio/nord-vim' "Nord dark theme
 Plug 'https://github.com/junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }  " installs the vim plugin and becomes available on the command line with ctrl+r
 Plug 'https://github.com/junegunn/fzf.vim'  " actually required for vim to use fzf
 Plug 'https://github.com/ntpeters/vim-better-whitespace'
-Plug 'https://github.com/tpope/vim-commentary'
+Plug 'https://github.com/tpope/vim-commentary' " for using gc to comment stuff out
 Plug 'https://github.com/jszakmeister/vim-togglecursor'
-Plug 'Valloric/YouCompleteMe'
-    let g:ycm_server_python_interpreter = '/usr/bin/python3'
-    let g:ycm_complete_in_comments = 1
-    let g:ycm_complete_in_strings = 1
-    let g:ycm_collect_identifiers_from_tags_files = 1
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
+    let g:coc_global_extensions = ['coc-json', 'coc-git', 'coc-yaml', 'coc-go', 'coc-html', 'coc-clangd', 'coc-cmake', 'coc-css', 'coc-sql', 'coc-java']
 
 " Sublime style selection. Highlight and then <C-n> for next, <C-x> to skip,
 " <C-p> to go back. <A-n> to select all matches
