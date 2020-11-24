@@ -7,7 +7,7 @@ $ sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/instal
 $ rm ~/.zshrc #if not rm'd then stow won't work later
 ```
 
-On MacOS you may have an issuew with the default shell not changing. Run this to change the shell:
+On MacOS you may have an issue with the default shell not changing. Run this to change the shell:
 
 ```
 $ chsh -s /bin/zsh
