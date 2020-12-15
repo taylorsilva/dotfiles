@@ -10,7 +10,7 @@ function note {
 
 # These are for work
 function authbosh {
-    set -e -u -x
+    set -e -u
     lpass sync
 
     env_name=${1:-Prod}
