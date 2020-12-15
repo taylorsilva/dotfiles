@@ -10,7 +10,7 @@ function note {
 
 # These are for work
 function authbosh {
-    set -e -u
+    set -u -x
     lpass sync
 
     env_name=${1:-Prod}
@@ -31,11 +31,11 @@ function authbosh {
     lpass show "${env_name} GCP Key" --notes >/tmp/authbosh.fifo &
 
     ssh-add -t8h /tmp/authbosh.fifo
-    set +e +u +x
+    set +u +x
 }
 
 function credhub-login {
-    set -e -u
+    set -u -x
 
     echo "checking for lastpass target..."
     lpass sync
@@ -43,5 +43,5 @@ function credhub-login {
     echo "targeting credhub..."
     credhub api "$(lpass show 'Shared-Concourse/Prod CredHub' --url)"
     credhub login -u "$(lpass show 'Shared-Concourse/Prod CredHub' --username)" -p "$(lpass show 'Shared-Concourse/Prod CredHub' --password)"
-    set +e +u
+    set +u +x
 }
