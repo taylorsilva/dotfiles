@@ -32,4 +32,7 @@ fi
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
-source <(fly completion --shell zsh)
+# machine specific changes should be made in ~/.zshrc.local
+if [ -e ~/.zshrc.local ]; then
+  source ~/.zshrc.local
+fi
