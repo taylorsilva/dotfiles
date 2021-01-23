@@ -119,7 +119,7 @@ Plug 'https://github.com/ntpeters/vim-better-whitespace'
 Plug 'https://github.com/tpope/vim-commentary' " for using gc to comment stuff out
 Plug 'https://github.com/jszakmeister/vim-togglecursor'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
-    let g:coc_global_extensions = ['coc-json', 'coc-git', 'coc-yaml', 'coc-go', 'coc-html', 'coc-clangd', 'coc-cmake', 'coc-css', 'coc-sql', 'coc-java']
+    let g:coc_global_extensions = ['coc-json', 'coc-git', 'coc-go', 'coc-html', 'coc-clangd', 'coc-cmake', 'coc-css', 'coc-sql', 'coc-java']
 
 " Sublime style selection. Highlight and then <C-n> for next, <C-x> to skip,
 " <C-p> to go back. <A-n> to select all matches
@@ -128,7 +128,6 @@ Plug 'https://github.com/zhimsel/vim-stay'
 
 " syntax highlighting for various languages
 Plug 'https://github.com/sheerun/vim-polyglot'
-	let g:polyglot_disabled = ['ansible'] " ansible was messing up any yaml file I looked at
 
 Plug 'https://github.com/fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 	let g:go_fmt_command = "goimports"
