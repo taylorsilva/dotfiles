@@ -126,8 +126,10 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'https://github.com/terryma/vim-multiple-cursors'
 Plug 'https://github.com/zhimsel/vim-stay'
 
-" Language Specific Plugins
+" syntax highlighting for various languages
 Plug 'https://github.com/sheerun/vim-polyglot'
+	let g:polyglot_disabled = ['ansible'] " ansible was messing up any yaml file I looked at
+
 Plug 'https://github.com/fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 	let g:go_fmt_command = "goimports"
     let go_echo_go_info = 0 " disable annoying popup when using auto-complete
