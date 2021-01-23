@@ -16,7 +16,7 @@
 [alias]
 	co = checkout
 	ci = commit --signoff -v
-    dci = duet-commit -v
+    dci = duet-commit -v --signoff
 	st = status
 	br = branch
 [filter "lfs"]
