@@ -16,6 +16,9 @@ plugins=(git)
 
 source $ZSH/oh-my-zsh.sh
 
+# enable tab completion for git
+autoload -Uz compinit && compinit
+
 # User configuration
 export EDITOR='nvim'
 export VISUAL='nvim'
