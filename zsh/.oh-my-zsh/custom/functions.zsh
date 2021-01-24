@@ -1,9 +1,27 @@
+function journal {
+  if [ -d "${HOME}/notes" ]; then
+    pushd $HOME/notes
+      today=$(date +"%Y-%m-%d")
+      git pull
+      if [[ ! -f ${today}.md ]]; then
+        cp templates/journal.md ${today}.md
+      fi
+      vim ${today}.md
+      git add --all && git ci -m "${today} - daily journal" && git push origin head
+    popd
+  fi
+}
+
 function note {
+  if [ $# != 1 ]; then
+    echo "exactly one argument is required which becomes the filename of the note"
+    return
+  fi
   if [ -d "${HOME}/notes" ]; then
     pushd $HOME/notes
       git pull
-      vim $(date +"%Y-%m-%d").md
-      git add --all && git ci -m "note" && git push origin head
+      vim ${1}.md
+      git add --all && git ci -m "note ${1}" && git push origin head
     popd
   fi
 }
