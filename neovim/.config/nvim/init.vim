@@ -65,7 +65,7 @@ endfunction
 """"""""""""""""""""""""""""""""""""""""
 " Key Mappings
 """"""""""""""""""""""""""""""""""""""""
-" change the leader key to space
+" change the leader key to comma
 let mapleader=","
 
 " clear search highlighting with <space>,
