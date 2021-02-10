@@ -1,3 +1,3 @@
 [submodule "zsh/.oh-my-zsh/custom/themes"]
 	path = zsh/.oh-my-zsh/custom/themes
-	url = git@github.com:taylorsilva/modern-zsh-theme.git
+	url = https://github.com/taylorsilva/modern-zsh-theme.git
