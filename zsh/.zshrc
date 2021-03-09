@@ -23,10 +23,14 @@ autoload -Uz compinit && compinit
 export EDITOR='nvim'
 export VISUAL='nvim'
 export GOPATH=$HOME/go
+export GOROOT=/usr/local/go
 export GIT_DUET_ROTATE_AUTHOR=1
 export GIT_DUET_CO_AUTHORED_BY=1
 
 # Add things to PATH
+if [ -d "$GOPATH/bin" ]; then
+  export PATH=$PATH:$GOPATH/bin
+fi
 if [ -d "$GOPATH/bin" ]; then
   export PATH=$PATH:$GOPATH/bin
 fi
