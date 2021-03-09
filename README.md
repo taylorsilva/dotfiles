@@ -29,3 +29,8 @@ setup instructions to follow. Check the `README.md` inside each folder.
 cd ~/.dotfiles
 stow bash neovim git #any other folders, separated by spaces
 ```
+
+---
+
+Other stuff to install
+- Fira Code font (enable ligatures) - https://github.com/tonsky/FiraCode
