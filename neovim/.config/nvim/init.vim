@@ -133,6 +133,23 @@ Plug 'https://github.com/fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 	let g:go_fmt_command = "goimports"
     let go_echo_go_info = 0 " disable annoying popup when using auto-complete
 
+Plug 'jez/vim-better-sml'
+augroup vimbettersml
+  au!
+  " open the REPL terminal buffer
+  au FileType sml nnoremap <silent> <buffer> <leader>is :SMLReplStart<CR>
+  " close the REPL (mnemonic: k -> kill)
+  au FileType sml nnoremap <silent> <buffer> <leader>ik :SMLReplStop<CR>
+  " build the project (using CM if possible)
+  au FileType sml nnoremap <silent> <buffer> <leader>ib :SMLReplBuild<CR>
+  " for opening a structure, not a file
+  au FileType sml nnoremap <silent> <buffer> <leader>io :SMLReplOpen<CR>
+  " use the current file into the REPL (even if using CM)
+  au FileType sml nnoremap <silent> <buffer> <leader>iu :SMLReplUse<CR>
+  " clear the REPL screen
+  au FileType sml nnoremap <silent> <buffer> <leader>ic :SMLReplClear<CR>
+augroup END
+
 call plug#end()
 
 " Set the theme
