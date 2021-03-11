@@ -1,26 +1,26 @@
 [user]
-	email = taylorsilva@outlook.com
-	name = Taylor Silva
+    email = taylorsilva@outlook.com
+    name = Taylor Silva
 [init]
-	defaultBranch = main
+    defaultBranch = main
 [includeIf "gitdir:~/workspace/concourse/**"]
     path = ~/workspace/concourse/.gitconfig
 [push]
-	default = simple
+    default = simple
 [url "git@github.com:"]
-	pushInsteadOf = https://github.com/
-	pushInsteadOf = git://github.com/
+    pushInsteadOf = https://github.com/
+    pushInsteadOf = git://github.com/
 [core]
-	excludesfile = /Users/taylor/.gitignore
-	editor = nvim
+    excludesfile = /Users/taylor/.gitignore
+    editor = nvim
 [alias]
-	co = checkout
-	ci = commit --signoff -v
+    co = checkout
+    ci = commit --signoff -v
     dci = duet-commit -v --signoff
-	st = status
-	br = branch
+    st = status
+    br = branch
 [filter "lfs"]
-	clean = git-lfs clean -- %f
-	smudge = git-lfs smudge -- %f
-	process = git-lfs filter-process
-	required = true
+    clean = git-lfs clean -- %f
+    smudge = git-lfs smudge -- %f
+    process = git-lfs filter-process
+    required = true

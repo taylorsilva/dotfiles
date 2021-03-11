@@ -2,7 +2,7 @@
 " Set default behaviour of neovim
 """"""""""""""""""""""""""""""""""""""""
 syntax on
-" Change how tabs look
+" use spaces instead of tabs
 set expandtab
 set tabstop=4
 set shiftwidth=4
