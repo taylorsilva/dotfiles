@@ -15,10 +15,6 @@ All changes should be made in the `init.vim` file.
 
 To install new plugins after you add them to `init.vim` run `nvim +PlugInstall +qa`
 
-### Golang Setup
-
-You'll need to install `gopls`
-
-### Other Troubleshooting
+### Troubleshooting
 
 Run the `:checkhealth` command.
