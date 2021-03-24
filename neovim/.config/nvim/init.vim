@@ -137,8 +137,6 @@ Plug 'https://github.com/fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 	let g:go_fmt_command = "goimports"
     let go_echo_go_info = 0 " disable annoying popup when using auto-complete
 	nmap gi :GoImplements<cr>
-	nmap gr :GoReferrers<cr>
-	nmap gc :GoCallees<cr>
 
 Plug 'jez/vim-better-sml'
 augroup vimbettersml
