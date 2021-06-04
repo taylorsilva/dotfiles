@@ -30,8 +30,8 @@ export GIT_DUET_CO_AUTHORED_BY=1
 if [ -d "$GOPATH/bin" ]; then
   export PATH=$PATH:$GOPATH/bin
 fi
-if [ -d "$GOPATH/bin" ]; then
-  export PATH=$PATH:$GOPATH/bin
+if [ -d "/usr/local/go/bin" ]; then
+  export PATH=$PATH:/usr/local/go/bin
 fi
 if [ -d "$HOME/.cargo/bin" ]; then
   export PATH="$HOME/.cargo/bin:$PATH"
