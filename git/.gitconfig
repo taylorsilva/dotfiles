@@ -5,6 +5,8 @@
     defaultBranch = main
 [includeIf "gitdir:~/workspace/concourse/**"]
     path = ~/workspace/concourse/.gitconfig
+[includeIf "gitdir:~/workspace/concourse/vmware/**"]
+    path = ~/workspace/concourse/vmware/.gitconfig
 [push]
     default = simple
 [url "git@github.com:"]
