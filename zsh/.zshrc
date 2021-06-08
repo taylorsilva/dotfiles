@@ -27,11 +27,11 @@ export GIT_DUET_ROTATE_AUTHOR=1
 export GIT_DUET_CO_AUTHORED_BY=1
 
 # Add things to PATH
-if [ -d "$GOPATH/bin" ]; then
+if [ -d "$GOPATH" ]; then
   export PATH=$PATH:$GOPATH/bin
 fi
-if [ -d "/usr/local/go/bin" ]; then
-  export PATH=$PATH:/usr/local/go/bin
+if [ -d "$GOROOT" ]; then
+  export PATH=$PATH:$GOROOT/bin
 fi
 if [ -d "$HOME/.cargo/bin" ]; then
   export PATH="$HOME/.cargo/bin:$PATH"
