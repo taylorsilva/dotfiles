@@ -34,3 +34,4 @@ stow bash neovim git #any other folders, separated by spaces
 
 Other stuff to install
 - Fira Code font (enable ligatures) - https://github.com/tonsky/FiraCode
+- Alternative unix tools - https://github.com/ibraheemdev/modern-unix
