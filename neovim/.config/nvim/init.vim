@@ -116,7 +116,6 @@ set foldlevelstart=99
 " run :PlugInstall to install new plugins
 call plug#begin('~/.local/share/nvim/plugged') "where plugins are installed
 
-Plug 'https://github.com/arcticicestudio/nord-vim' "Nord dark theme
 Plug 'dracula/vim', { 'as': 'dracula' } "dracula theme
 Plug 'https://github.com/junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }  " installs the vim plugin and becomes available on the command line with ctrl+r
 Plug 'https://github.com/junegunn/fzf.vim'  " actually required for vim to use fzf
