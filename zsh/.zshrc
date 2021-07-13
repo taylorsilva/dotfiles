@@ -29,6 +29,7 @@ export GIT_DUET_CO_AUTHORED_BY=1
 # Add things to PATH
 if [ -d "$GOPATH" ]; then
   export PATH=$PATH:$GOPATH/bin
+  export GOOS=linux
 fi
 if [ -d "$GOROOT" ]; then
   export PATH=$PATH:$GOROOT/bin
