@@ -14,6 +14,7 @@ alias restartbt='sudo kill -9 $(pgrep bluetoothd)'
 # https://github.com/sharkdp/bat
 if [[ -x $(which bat) ]]; then
   alias cat="bat"
+  export BAT_STYLE="plain"
 fi
 # https://github.com/bootandy/dust
 if [[ -x $(which dust) ]]; then
