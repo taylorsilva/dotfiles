@@ -131,11 +131,14 @@ Plug 'https://github.com/zhimsel/vim-stay'
 
 " syntax highlighting for various languages
 Plug 'https://github.com/sheerun/vim-polyglot'
+	let g:polyglot_disabled = ['elm', 'go']
 
 Plug 'https://github.com/fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 	let g:go_fmt_command = "goimports"
     let go_echo_go_info = 0 " disable annoying popup when using auto-complete
 	nmap gi :GoImplements<cr>
+
+Plug 'https://github.com/ElmCast/elm-vim'
 
 Plug 'jez/vim-better-sml'
 augroup vimbettersml
