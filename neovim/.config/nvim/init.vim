@@ -139,6 +139,7 @@ Plug 'https://github.com/fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 	nmap gi :GoImplements<cr>
 
 Plug 'https://github.com/ElmCast/elm-vim'
+	let g:elm_setup_keybindings = 0
 
 Plug 'jez/vim-better-sml'
 augroup vimbettersml
