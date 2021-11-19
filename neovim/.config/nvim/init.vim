@@ -44,7 +44,7 @@ let $SHELL="/bin/bash"
 
 " Use rg to perform the search, so that .gitignore files and the like are
 " respected
-let g:fzf_default_command = 'rg --ignore .git -l -g ""'
+let g:fzf_default_command = 'rg --files'
 
 function FuzzyFind(show_hidden)
 	if a:show_hidden
