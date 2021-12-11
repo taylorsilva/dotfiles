@@ -39,11 +39,11 @@ stow bash neovim git #any other folders, separated by spaces
 
 Addons to install:
 - https://github.com/gorhill/uBlock
-- https://addons.mozilla.org/en-US/firefox/addon/tree-style-tab/
+- https://addons.mozilla.org/en-US/firefox/addon/sidebery/
 - https://addons.mozilla.org/en-US/firefox/addon/bitwarden-password-manager/
 - https://addons.mozilla.org/en-US/firefox/addon/clearurls/
 
-### Tree Style Tab UI Adjustment
+### Hide Firefox's Native Tabs
 
 1. `about:config` and change `toolkit.legacyUserProfileCustomizations.stylesheets` to `true`
 1. `about:profiles` and open the **Root Directory** in your file manager
