@@ -30,9 +30,29 @@ cd ~/.dotfiles
 stow bash neovim git #any other folders, separated by spaces
 ```
 
----
-
-Other stuff to install
+## Other stuff to install
 - Fira Code font (enable ligatures) - https://github.com/ryanoasis/nerd-fonts/releases/ (Search for `Firacode`)
 - Alternative unix tools - https://github.com/ibraheemdev/modern-unix
 - https://github.com/koalaman/shellcheck/
+
+## Firefox
+
+Addons to install:
+- https://github.com/gorhill/uBlock
+- https://addons.mozilla.org/en-US/firefox/addon/tree-style-tab/
+- https://addons.mozilla.org/en-US/firefox/addon/bitwarden-password-manager/
+- https://addons.mozilla.org/en-US/firefox/addon/clearurls/
+
+### Tree Style Tab UI Adjustment
+
+1. `about:config` and change `toolkit.legacyUserProfileCustomizations.stylesheets` to `true`
+1. `about:profiles` and open the **Root Directory** in your file manager
+1. Create a folder called `chrome` inside that directory and then a file called `userChrome.css` inside the new folder. Populate `userChrome.css` with the following:
+
+```css
+/* hides the native tabs */
+#TabsToolbar {
+  visibility: collapse;
+}
+```
+Go back to Firefox's `about:profiles` page and press the `Restart Normally...` button for changes to take effect.
