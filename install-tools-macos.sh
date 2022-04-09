@@ -12,6 +12,15 @@ if [[ ! -d "/opt/homebrew" ]]; then
     source ~/.zshrc.local
 fi
 
+if [[ ! -e "${HOME}/.ssh/config" ]]; then
+    # ensures that you're not prompted for a password every time you git push
+    contents="Host *
+  UseKeychain yes
+  AddKeysToAgent yes
+  IdentityFile ~/.ssh/[your-secure-ssh-key-name]"
+  echo "$contents" > "${HOME}/.ssh/config"
+fi
+
 brew install stow
 brew install neovim
 brew install shellcheck
