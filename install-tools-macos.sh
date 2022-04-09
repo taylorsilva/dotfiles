@@ -32,3 +32,4 @@ brew install go
 brew install broot
 brew install fd
 brew install dust
+brew install node
