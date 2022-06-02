@@ -6,7 +6,13 @@ To use them do the following:
 
 ```bash
 git clone git@github.com:taylorsilva/dotfiles.git ~/.dotfiles
+```
+
+```bash
 cd ~/.dotfiles
+```
+
+```bash
 git submodule update --init
 ```
 

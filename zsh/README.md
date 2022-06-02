@@ -3,8 +3,11 @@
 Before `stow`ing these files make sure [`oh-my-zsh`](https://ohmyz.sh/) is already installed.
 
 ```bash
-$ sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
-$ rm ~/.zshrc #if not rm'd then stow won't work later
+sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+```
+
+```bash
+rm ~/.zshrc #if not rm'd then stow won't work later
 ```
 
 On MacOS you may have an issue with the default shell not changing. Run this to change the shell:
