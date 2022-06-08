@@ -22,17 +22,25 @@ autoload -Uz compinit && compinit
 # User configuration
 export EDITOR='nvim'
 export VISUAL='nvim'
-export GOPATH=$HOME/go
 export GIT_DUET_ROTATE_AUTHOR=1
 export GIT_DUET_CO_AUTHORED_BY=1
 
 # Add things to PATH
+
+# Common linux path for Go install
+if [ -d /usr/local/go ]; then
+  export GOPATH=/usr/local/go
+fi
+
+# Common macOS path for Go install
+if [ -d $HOME/go ]; then
+  export GOPATH=$HOME/go
+fi
+
 if [ -d "$GOPATH" ]; then
   export PATH=$PATH:$GOPATH/bin
 fi
-if [ -d "$GOROOT" ]; then
-  export PATH=$PATH:$GOROOT/bin
-fi
+
 if [ -d "$HOME/.cargo/bin" ]; then
   export PATH="$HOME/.cargo/bin:$PATH"
   source "$HOME/.cargo/env"
