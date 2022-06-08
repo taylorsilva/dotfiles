@@ -27,18 +27,15 @@ export GIT_DUET_CO_AUTHORED_BY=1
 
 # Add things to PATH
 
-# Common linux path for Go install
 if [ -d /usr/local/go ]; then
-  export GOPATH=/usr/local/go
-fi
-
-# Common macOS path for Go install
-if [ -d $HOME/go ]; then
+  # If go is installed then set users GOPATH which is where packages/binaries
+  # will be installed
   export GOPATH=$HOME/go
 fi
 
 if [ -d "$GOPATH" ]; then
   export PATH=$PATH:$GOPATH/bin
+  export PATH=$PATH:/usr/loca/go/bin
 fi
 
 if [ -d "$HOME/.cargo/bin" ]; then
