@@ -35,7 +35,7 @@ fi
 
 if [ -d "$GOPATH" ]; then
   export PATH=$PATH:$GOPATH/bin
-  export PATH=$PATH:/usr/loca/go/bin
+  export PATH=$PATH:/usr/local/go/bin
 fi
 
 if [ -d "$HOME/.cargo/bin" ]; then
