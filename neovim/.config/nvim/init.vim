@@ -72,7 +72,7 @@ let mapleader=","
 map <space> :noh<CR>
 
 " open FZF with ,f and includes hidden files in your search
-map <leader>f :call FuzzyFind(1)<CR>
+map <leader>f :call FuzzyFind(0)<CR>
 
 " Quickly save, quit, or save-and-quit
 map <leader>w :w<CR>
