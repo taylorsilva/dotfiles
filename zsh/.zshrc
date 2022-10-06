@@ -26,6 +26,7 @@ export GIT_DUET_ROTATE_AUTHOR=1
 export GIT_DUET_CO_AUTHORED_BY=1
 
 # Add things to PATH
+export PATH=$PATH:$HOME/bin
 
 if [ -d /usr/local/go ]; then
   # If go is installed then set users GOPATH which is where packages/binaries
