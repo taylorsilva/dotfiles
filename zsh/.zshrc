@@ -44,6 +44,10 @@ if [ -d "$HOME/.cargo/bin" ]; then
   source "$HOME/.cargo/env"
 fi
 
+if [ -d "$HOME/.local/bin" ]; then
+  export PATH="$PATH:$HOME/.local/bin"
+fi
+
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 # machine specific changes should be made in ~/.zshrc.local
