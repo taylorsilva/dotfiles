@@ -13,3 +13,5 @@
 * Copy mode for scrolling: `ctrl-b` then `[`
 
 Quick read for getting started: https://pragmaticpineapple.com/gentle-guide-to-get-started-with-tmux/
+
+tmate is also great for getting around firewalls: https://tmate.io/
