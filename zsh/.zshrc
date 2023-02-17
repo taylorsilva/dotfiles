@@ -53,7 +53,10 @@ if [ -f "$HOME/.ssh/private_key" ]; then
   ssh-add $HOME/.ssh/private_key
 fi
 
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+if [ -d $HOME/.fzf/ ]; then
+  source $HOME/.fzf/shell/key-bindings.zsh
+  source $HOME/.fzf/shell/completion.zsh
+fi
 
 # machine specific changes should be made in ~/.zshrc.local
 if [ -e ~/.zshrc.local ]; then
