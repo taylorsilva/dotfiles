@@ -48,6 +48,11 @@ if [ -d "$HOME/.local/bin" ]; then
   export PATH="$PATH:$HOME/.local/bin"
 fi
 
+if [ -f "$HOME/.ssh/private_key" ]; then
+  eval $(ssh-agent)
+  ssh-add $HOME/.ssh/private_key
+fi
+
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 # machine specific changes should be made in ~/.zshrc.local
