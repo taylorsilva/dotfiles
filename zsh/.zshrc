@@ -58,6 +58,11 @@ if [ -d $HOME/.fzf/ ]; then
   source $HOME/.fzf/shell/completion.zsh
 fi
 
+if [ -d /usr/share/doc/fzf/examples/ ]; then
+  source /usr/share/doc/fzf/examples/key-bindings.zsh
+  source /usr/share/doc/fzf/examples/completion.zsh
+fi
+
 # machine specific changes should be made in ~/.zshrc.local
 if [ -e ~/.zshrc.local ]; then
   source ~/.zshrc.local
