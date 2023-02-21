@@ -28,37 +28,44 @@ export GIT_DUET_CO_AUTHORED_BY=1
 # Add things to PATH
 export PATH=$PATH:$HOME/bin
 
-if [ -d /usr/local/go ]; then
+if [[ -d /usr/local/go ]]; then
   # If go is installed then set users GOPATH which is where packages/binaries
   # will be installed
   export GOPATH=$HOME/go
 fi
 
-if [ -d "$GOPATH" ]; then
+if [[ -d "$GOPATH" ]]; then
   export PATH=$PATH:$GOPATH/bin
   export PATH=$PATH:/usr/local/go/bin
 fi
 
-if [ -d "$HOME/.cargo/bin" ]; then
+if [[ -d "$HOME/.cargo/bin" ]]; then
   export PATH="$HOME/.cargo/bin:$PATH"
   source "$HOME/.cargo/env"
 fi
 
-if [ -d "$HOME/.local/bin" ]; then
+if [[ -d "$HOME/.local/bin" ]]; then
   export PATH="$PATH:$HOME/.local/bin"
 fi
 
-if [ -f "$HOME/.ssh/private_key" ]; then
+if [[ -e $(which terraform) ]]; then
+    export TF_PLUGIN_CACHE_DIR=$HOME/.terraform.d/plugin-cache
+    mkdir -p $HOME/.terraform.d/plugin-cache
+fi
+
+if [[ -f "$HOME/.ssh/private_key" ]]; then
   eval $(ssh-agent)
   ssh-add $HOME/.ssh/private_key
 fi
 
-if [ -d $HOME/.fzf/ ]; then
+# Method 1 to enable fzf
+if [[ -d $HOME/.fzf/ ]]; then
   source $HOME/.fzf/shell/key-bindings.zsh
   source $HOME/.fzf/shell/completion.zsh
 fi
 
-if [ -d /usr/share/doc/fzf/examples/ ]; then
+# Method 2 to enable fzf
+if [[ -d /usr/share/doc/fzf/examples/ ]]; then
   source /usr/share/doc/fzf/examples/key-bindings.zsh
   source /usr/share/doc/fzf/examples/completion.zsh
 fi
