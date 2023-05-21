@@ -28,15 +28,11 @@ export GIT_DUET_CO_AUTHORED_BY=1
 # Add things to PATH
 export PATH=$PATH:$HOME/bin
 
-if [[ -d /usr/local/go ]]; then
+if [[ -e $(which go) ]]; then
   # If go is installed then set users GOPATH which is where packages/binaries
   # will be installed
   export GOPATH=$HOME/go
-fi
-
-if [[ -d "$GOPATH" ]]; then
   export PATH=$PATH:$GOPATH/bin
-  export PATH=$PATH:/usr/local/go/bin
 fi
 
 if [[ -d "$HOME/.cargo/bin" ]]; then
