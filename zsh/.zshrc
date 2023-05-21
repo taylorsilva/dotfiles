@@ -25,6 +25,11 @@ export VISUAL='nvim'
 export GIT_DUET_ROTATE_AUTHOR=1
 export GIT_DUET_CO_AUTHORED_BY=1
 
+# machine specific changes should be made in ~/.zshrc.local
+if [ -e ~/.zshrc.local ]; then
+  source ~/.zshrc.local
+fi
+
 # Add things to PATH
 export PATH=$PATH:$HOME/bin
 
@@ -64,9 +69,4 @@ fi
 if [[ -d /usr/share/doc/fzf/examples/ ]]; then
   source /usr/share/doc/fzf/examples/key-bindings.zsh
   source /usr/share/doc/fzf/examples/completion.zsh
-fi
-
-# machine specific changes should be made in ~/.zshrc.local
-if [ -e ~/.zshrc.local ]; then
-  source ~/.zshrc.local
 fi
