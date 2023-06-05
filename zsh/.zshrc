@@ -33,6 +33,10 @@ fi
 # Add things to PATH
 export PATH=$PATH:$HOME/bin
 
+if [[ -d "/usr/local/go/" ]]; then
+  export PATH=$PATH:/usr/local/go/bin
+fi
+
 if [[ -e $(which go) ]]; then
   # If go is installed then set users GOPATH which is where packages/binaries
   # will be installed
