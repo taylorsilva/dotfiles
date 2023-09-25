@@ -3,7 +3,6 @@ alias vim="nvim"
 alias g="git"
 alias gap="git add -p"
 alias d="docker"
-alias dm="docker-machine"
 alias dc="docker-compose"
 alias k="kubectl"
 alias ll="ls -lahF"
@@ -31,4 +30,9 @@ fi
 # https://github.com/BurntSushi/ripgrep
 if [[ -x $(which rg) ]]; then
   alias grep="rg"
+fi
+
+if [[ -x $(which podman) ]]; then
+  alias docker="podman"
+  alias p="podman"
 fi
