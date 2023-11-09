@@ -9,6 +9,7 @@ set shiftwidth=4
 
 " don't remove the EOL at the end of files
 set nofixeol
+set nofixendofline
 
 " always show line numbers
 set number
