@@ -8,7 +8,7 @@ set tabstop=4
 set shiftwidth=4
 
 " don't remove the EOL at the end of files
-set nofixendofline
+set nofixeol
 
 " always show line numbers
 set number
