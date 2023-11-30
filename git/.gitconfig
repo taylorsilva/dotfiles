@@ -21,6 +21,7 @@
     dci = duet-commit -v --signoff
     st = status
     br = branch
+    rbd = rebase --committer-date-is-author-date
 [filter "lfs"]
     clean = git-lfs clean -- %f
     smudge = git-lfs smudge -- %f
