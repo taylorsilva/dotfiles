@@ -60,7 +60,7 @@ fi
 
 if [[ -f "$HOME/.ssh/private_key" ]]; then
   eval $(ssh-agent)
-  ssh-add $HOME/.ssh/private_key
+  ssh-add $HOME/.ssh/*_key
 fi
 
 # Method 1 to enable fzf
