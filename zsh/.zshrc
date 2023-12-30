@@ -56,9 +56,9 @@ if [[ -e $(which terraform 2>/dev/null) ]]; then
     mkdir -p $HOME/.terraform.d/plugin-cache
 fi
 
-if [[ -f "$HOME/.ssh/private_key" ]]; then
+if [[ -z "${SSH_AUTH_SOCK}" ]]; then
   eval $(ssh-agent)
-  ssh-add $HOME/.ssh/*_key
+  ssh-add
 fi
 
 # Start oh-my-zsh after PATH has been built
