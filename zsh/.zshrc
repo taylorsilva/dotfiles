@@ -14,8 +14,6 @@ DISABLE_UPDATE_PROMPT="true"
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(git z)
 
-source $ZSH/oh-my-zsh.sh
-
 # enable tab completion for git
 autoload -Uz compinit && compinit
 
@@ -37,7 +35,7 @@ if [[ -d "/usr/local/go/" ]]; then
   export PATH=$PATH:/usr/local/go/bin
 fi
 
-if [[ -e $(which go) ]]; then
+if [[ -e $(which go 2>/dev/null) ]]; then
   # If go is installed then set users GOPATH which is where packages/binaries
   # will be installed
   export GOPATH=$HOME/go
@@ -53,7 +51,7 @@ if [[ -d "$HOME/.local/bin" ]]; then
   export PATH="$PATH:$HOME/.local/bin"
 fi
 
-if [[ -e $(which terraform) ]]; then
+if [[ -e $(which terraform 2>/dev/null) ]]; then
     export TF_PLUGIN_CACHE_DIR=$HOME/.terraform.d/plugin-cache
     mkdir -p $HOME/.terraform.d/plugin-cache
 fi
@@ -62,6 +60,9 @@ if [[ -f "$HOME/.ssh/private_key" ]]; then
   eval $(ssh-agent)
   ssh-add $HOME/.ssh/*_key
 fi
+
+# Start oh-my-zsh after PATH has been built
+source $ZSH/oh-my-zsh.sh
 
 # Method 1 to enable fzf
 if [[ -d $HOME/.fzf/ ]]; then

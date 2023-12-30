@@ -11,28 +11,28 @@ alias restartwifi='sudo networksetup -setv4off Wi-Fi;sudo  networksetup -setdhcp
 alias restartbt='sudo kill -9 $(pgrep bluetoothd)'
 
 # https://github.com/sharkdp/bat
-if [[ -x $(which bat) ]]; then
+if [[ -e $(which bat 2>/dev/null) ]]; then
   alias cat="bat"
   export BAT_STYLE="plain"
 fi
 # https://github.com/bootandy/dust
-if [[ -x $(which dust) ]]; then
+if [[ -x $(which dust 2>/dev/null) ]]; then
   alias du="dust"
 fi
 # https://github.com/Canop/broot
-if [[ -x $(which broot) ]]; then
+if [[ -x $(which broot 2>/dev/null) ]]; then
   alias tree="broot"
 fi
 # https://github.com/sharkdp/fd
-if [[ -x $(which fd) ]]; then
+if [[ -x $(which fd 2>/dev/null) ]]; then
   alias find="fd"
 fi
 # https://github.com/BurntSushi/ripgrep
-if [[ -x $(which rg) ]]; then
+if [[ -x $(which rg 2>/dev/null) ]]; then
   alias grep="rg"
 fi
 
-if [[ -x $(which podman) ]]; then
+if [[ -x $(which podman 2>/dev/null) ]]; then
   alias docker="podman"
   alias p="podman"
 fi
