@@ -64,14 +64,5 @@ fi
 # Start oh-my-zsh after PATH has been built
 source $ZSH/oh-my-zsh.sh
 
-# Method 1 to enable fzf
-if [[ -d $HOME/.fzf/ ]]; then
-  source $HOME/.fzf/shell/key-bindings.zsh
-  source $HOME/.fzf/shell/completion.zsh
-fi
-
-# Method 2 to enable fzf
-if [[ -d /usr/share/doc/fzf/examples/ ]]; then
-  source /usr/share/doc/fzf/examples/key-bindings.zsh
-  source /usr/share/doc/fzf/examples/completion.zsh
-fi
+# Will setup PATH and source relevant files
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
