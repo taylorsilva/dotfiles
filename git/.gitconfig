@@ -8,7 +8,7 @@
 [includeIf "gitdir:~/workspace/prophix/**"]
     path = ~/workspace/prophix/.gitconfig
 [push]
-    default = simple
+    default = current #automatically setups remote tracking
 [url "git@github.com:"]
     pushInsteadOf = https://github.com/
     pushInsteadOf = git://github.com/
@@ -28,4 +28,14 @@
     process = git-lfs filter-process
     required = true
 [merge]
-    conflictStyle = diff3
+    conflictStyle = zdiff3
+[rebase]
+    autstash = true #runs git stash and pop when doing a git pull --rebase
+[commit]
+    verbose = true
+[rerere]
+    enabled = true #remembers how you resolved merge conflicts during rebase and auto resolves them again if it can
+[diff]
+    algorithm = histogram
+[log]
+    date = iso
