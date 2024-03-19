@@ -1,3 +1,13 @@
+## Install Neovim (Linux)
+
+On any Linux system the following should work:
+
+```
+curl -OL https://github.com/neovim/neovim/releases/latest/download/nvim-linux64.tar.gz
+tar xzf nvim-linux64.tar.gz
+sudo cp -r ./nvim-linux64/* /usr/local/
+```
+
 ## Neovim Configuration
 
 Install vim-plug and then install the plugins:
