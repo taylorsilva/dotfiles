@@ -51,6 +51,10 @@ if [[ -d "$HOME/.local/bin" ]]; then
   export PATH="$PATH:$HOME/.local/bin"
 fi
 
+if [[ -d "/snap/bin" ]]; then
+  export PATH="$PATH:/snap/bin"
+fi
+
 if [[ -e $(which terraform 2>/dev/null) ]]; then
     export TF_PLUGIN_CACHE_DIR=$HOME/.terraform.d/plugin-cache
     mkdir -p $HOME/.terraform.d/plugin-cache
