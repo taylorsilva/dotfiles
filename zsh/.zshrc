@@ -47,6 +47,14 @@ if [[ -d "$HOME/.cargo/bin" ]]; then
   source "$HOME/.cargo/env"
 fi
 
+if [[ -e $(which java 2>/dev/null) ]]; then
+  java_symlink=$(which java)
+  java_path=$(readlink -f ${java_symlink})
+  export JAVA_HOME="${java_path%/bin/java}"
+  unset java_symlink
+  unset java_path
+fi
+
 if [[ -d "$HOME/.local/bin" ]]; then
   export PATH="$PATH:$HOME/.local/bin"
 fi
