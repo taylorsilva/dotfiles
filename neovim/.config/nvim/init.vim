@@ -42,9 +42,8 @@ set wrapmargin=0
 set wrap
 set linebreak
 
-" always assume bash when executing stuff
-set shell=/bin/bash
-let $SHELL="/bin/bash"
+" set zsh as default shell when running terminal commands
+set shell=zsh
 
 " Use rg to perform the search, so that .gitignore files and the like are
 " respected
@@ -82,6 +81,8 @@ map <leader>f :call FuzzyFind(0)<CR>
 map <leader>w :w<CR>
 map <leader>x :x<CR>
 map <leader>q :q<CR>
+
+map <leader>t :tab terminal<CR>
 
 "navigate tabs
 map <leader>n :tabn<CR>
