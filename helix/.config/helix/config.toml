@@ -15,3 +15,4 @@ k = "normal_mode"
 [keys.normal.space]
 x = ":x"
 w = ":w"
+q = ":q"
