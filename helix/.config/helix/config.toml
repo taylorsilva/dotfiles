@@ -1,5 +1,8 @@
 theme = "dracula"
 
+[editor.soft-wrap]
+enable = true
+
 [editor.cursor-shape]
 insert = "bar"
 normal = "block"
