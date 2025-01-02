@@ -137,7 +137,7 @@ Plug 'https://github.com/ntpeters/vim-better-whitespace'
 Plug 'https://github.com/tpope/vim-commentary' " for using gc to comment stuff out
 Plug 'https://github.com/jszakmeister/vim-togglecursor'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
-    let g:coc_global_extensions = ['coc-json', 'coc-git', 'coc-go', 'coc-html', 'coc-clangd', 'coc-cmake', 'coc-css', 'coc-java', 'coc-python']
+    let g:coc_global_extensions = ['coc-json', 'coc-git', 'coc-go', 'coc-clangd', 'coc-cmake', 'coc-css', 'coc-java', 'coc-python']
 
 " Sublime style selection. Highlight and then <C-n> for next, <C-x> to skip,
 " <C-p> to go back. <A-n> to select all matches
