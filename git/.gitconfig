@@ -14,7 +14,7 @@
     pushInsteadOf = git://github.com/
 [core]
     excludesfile = /Users/taylor/.gitignore
-    editor = nvim
+    editor = hx
 [alias]
     co = checkout
     ci = commit --signoff -v

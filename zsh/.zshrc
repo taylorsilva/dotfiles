@@ -18,8 +18,8 @@ plugins=(git z)
 autoload -Uz compinit && compinit
 
 # User configuration
-export EDITOR='nvim'
-export VISUAL='nvim'
+export EDITOR='hx'
+export VISUAL='hx'
 export GIT_DUET_ROTATE_AUTHOR=1
 export GIT_DUET_CO_AUTHORED_BY=1
 
