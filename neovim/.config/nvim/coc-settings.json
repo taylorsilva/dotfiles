@@ -11,6 +11,12 @@
 			],
 			"initializationOptions": {},
 			"settings": {}
+		},
+		"go": {
+			"command": "gopls",
+			"filetypes": [
+				"go"
+			]
 		}
 	},
 	"coc.preferences.formatOnSave": true,
