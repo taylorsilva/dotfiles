@@ -70,8 +70,8 @@ fi
 
 if [[ -z "${SSH_AUTH_SOCK}" ]]; then
   eval $(ssh-agent)
-  ssh-add ~/.ssh/*_key
 fi
+ssh-add ~/.ssh/*_key
 
 # Start oh-my-zsh after PATH has been built
 source $ZSH/oh-my-zsh.sh
