@@ -126,6 +126,7 @@ set foldlevelstart=99
 " Plugins
 """"""""""""""""""""""""""""""""""""""""
 
+if has("nvim")
 " Plugin configuration
 " run :PlugInstall to install new plugins
 call plug#begin('~/.local/share/nvim/plugged') "where plugins are installed
@@ -185,3 +186,4 @@ call plug#end()
 " Set the theme
 set termguicolors " enable true colors support
 colorscheme dracula
+endif
