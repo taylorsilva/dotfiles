@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+# Sleepwatcher (Homebrew package) script that runs on sleep.
+
+# Turn off bluetooth because it keeps causing the mac to wakeup when it should be asleep
+/opt/homebrew/bin/blueutil --power off
+

@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+# Sleepwatcher (Homebrew package) script that runs on sleep.
+/opt/homebrew/bin/blueutil --power on
+
