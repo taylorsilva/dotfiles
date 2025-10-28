@@ -78,3 +78,5 @@ source $ZSH/oh-my-zsh.sh
 
 # Will setup PATH and source relevant files
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+export HISTORY_IGNORE="(AWS_SECRET|AWS_ACCESS|HCLOUD_TOKEN|NAMECHEAP_API)"
