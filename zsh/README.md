@@ -22,6 +22,12 @@ Then from the parent directory of this repo you can run:
 stow zsh
 ```
 
+If you need to reload the shell run:
+
+```bash
+omz reload
+```
+
 ---
 
 For local or machine specific changes you can add stuff to `~/.zshrc.local`. That file will be sourced on startup.
