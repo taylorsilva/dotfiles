@@ -39,3 +39,5 @@
     algorithm = histogram
 [log]
     date = iso
+[branch]
+    sort = committerdate
